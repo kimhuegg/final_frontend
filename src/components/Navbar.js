@@ -37,7 +37,6 @@ function Navbar() {
         <>
             <div style={{
                 boxShadow: 'rgb(204 207 209) 0px 0px 9px',
-                zIndex: 1000
             }}>
                 <Container >
                     <Grid container spacing={1} justifyContent={'space-between'} alignItems={'center'} style={{
@@ -89,7 +88,7 @@ function Navbar() {
                             }} variant="text">
                                 <AddCircleOutlineIcon />
                             </IconButton>
-                            <Link to={'/profile'} style={{
+                            <Link to={'/profile/post'} style={{
                                 textDecoration: 'none',
                                 padding: 0,
                                 margin: 0
@@ -126,8 +125,8 @@ function Navbar() {
                                 </IconButton>
                             </Grid>
                             {
-                                categories.map((item) => (
-                                    <Grid item>
+                                categories.map((item, index) => (
+                                    <Grid item key={index}>
                                         <Typography><Link to={"/homepage"}>{item}</Link></Typography>
                                     </Grid>
                                 ))

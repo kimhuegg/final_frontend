@@ -2,11 +2,16 @@ import React from 'react'
 import {
     Container,
     Box,
-    Button
+    Button,
+    Grid
 } from '@mui/material'
 import luch from './lunch.jpg'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import FollowButton from '../../components/profile/FollowButton';
+import CardAvatar from '../../components/profile/CardAvatar';
+
+import {Outlet} from 'react-router-dom'
 
 function Profile() {
     return (
@@ -16,19 +21,28 @@ function Profile() {
                 overflow: 'hidden',
                 backgroundImage: `url(${luch})`,
                 marginTop: 15,
-                borderRadius: 20
+                borderRadius: 20,
+                display: 'flex',
+                justifyContent: 'end',
+                alignItems: 'end',
+                padding: 20
             }}>
+                <FollowButton />
+            </Box>
+            <Box style={{
+                marginTop : 20
 
-                <Button variant="contained" style={{
+            }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                        <CardAvatar />
+                    </Grid>
+                    <Grid item xs={8}>
+                        <Outlet />
+                    </Grid>
 
-                    padding: 10,
-                    borderRadius: 10,
-                    backgroundColor: '#fff',
-                    boxShadow: 'rgb(0 0 0 / 87%) -8px 6px 20px'
-
-                }}
-                    endIcon={<CheckCircleIcon style={{ color: '#32CD32' }} />}
-                >Đang theo dõi</Button>
+                </Grid>
+                
             </Box>
 
 
