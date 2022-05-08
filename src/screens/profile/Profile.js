@@ -10,6 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import FollowButton from '../../components/profile/FollowButton';
 import CardAvatar from '../../components/profile/CardAvatar';
+import CardOtherInfo from '../../components/profile/CardOtherInfo';
 
 import {Outlet} from 'react-router-dom'
 
@@ -36,6 +37,7 @@ function Profile() {
                 <Grid container spacing={2}>
                     <Grid item xs={4}>
                         <CardAvatar />
+                        <CardOtherInfo />
                     </Grid>
                     <Grid item xs={8}>
                         <Outlet />

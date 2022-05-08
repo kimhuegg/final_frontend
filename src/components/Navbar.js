@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArticleIcon from '@mui/icons-material/Article';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -18,6 +18,7 @@ import Divider from '@mui/material/Divider';
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
 import NotificationButton from './NotificationButton';
+import logo from './logo123.png'
 
 
 function Navbar() {
