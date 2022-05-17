@@ -26,7 +26,8 @@ function FollowerItemButton() {
                 borderRadius: 5,
                 backgroundColor: '#fff',
                 border: '1px solid black',
-                fontSize: 'small'
+                fontSize: 'small',
+                color: 'black'
 
             }}
             endIcon={isFollow? <CheckCircleIcon style={{ color: '#32CD32' }} /> : <RadioButtonUncheckedOutlinedIcon />}
@@ -46,6 +47,7 @@ function FollowerItem() {
             boxShadow: 'rgb(232 234 235) 7px 7px 7px',
             marginBottom: 20,
             padding: 15
+
 
         }}>
             <Grid container spacing={2} justifyContent={'space-between'}>

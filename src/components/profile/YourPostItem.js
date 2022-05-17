@@ -46,7 +46,8 @@ function YourPostItem() {
                         <Grid container>
                             <Grid item xs={6}>
                                 <Typography style={{
-                                    color: 'rgb(116 112 112)'
+                                    color: 'rgb(116 112 112)',
+                                    fontSize: 12
                                 }}>Nồi chiên không dầu</Typography>
                             </Grid>
                             <Grid item xs={6} style={{
@@ -67,7 +68,7 @@ function YourPostItem() {
                         <Typography variant='span'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             <span>...</span>
-                            <Link to={'#'}>xem tiếp</Link>
+                            <Link to={'/recipe'}>xem tiếp</Link>
                         </Typography>
 
                     </Box>
@@ -83,14 +84,8 @@ function YourPostItem() {
                         <ChatBubbleOutlineOutlinedIcon/><Typography > 1.5k &nbsp;</Typography>
                         <RemoveRedEyeOutlinedIcon/><Typography > 1.5k &nbsp;</Typography>
                     </Box>
-
-
-
                 </Grid>
-
             </Grid>
-
-
         </Box>
     );
 }

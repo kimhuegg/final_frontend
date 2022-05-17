@@ -20,7 +20,8 @@ function FollowButton() {
             borderRadius: 10,
             backgroundColor: '#fff',
             boxShadow: 'rgb(0 0 0 / 87%) -8px 6px 20px',
-            border: '1px solid black'
+            border: '1px solid black',
+            color: 'black'
 
         }}
             endIcon={isFollow? <CheckCircleIcon style={{ color: '#32CD32' }} /> : <RadioButtonUncheckedOutlinedIcon />}

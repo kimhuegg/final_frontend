@@ -54,7 +54,8 @@ function SaveItem() {
                         <Grid container>
                             <Grid item xs={6}>
                                 <Typography style={{
-                                    color: 'rgb(116 112 112)'
+                                    color: 'rgb(116 112 112)',
+                                    fontSize: 12
                                 }}>Nồi chiên không dầu</Typography>
                             </Grid>
                             <Grid item xs={6} style={{
