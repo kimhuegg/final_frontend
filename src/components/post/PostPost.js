@@ -20,7 +20,7 @@ function PostPost() {
             <Box style={{
                 height: 300,
                 overflow: 'hidden',
-                backgroundImage: `url(${pic})`,
+                mage: `url(${pic})`,
             }}>
                 
             </Box>

@@ -105,7 +105,7 @@ function Navbar() {
                             {
                                 categories.map((item, index) => (
                                     <Grid item key={index}>
-                                        <Typography><Link to={"/homepage"}>{item}</Link></Typography>
+                                        <Typography><Link to={"/category"}>{item}</Link></Typography>
                                     </Grid>
                                 ))
                             }

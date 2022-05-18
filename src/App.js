@@ -16,6 +16,7 @@ import Recipe from './screens/posts/Recipe';
 import Post from './screens/posts/Post';
 import CreatePost from './screens/posts/CreatePost';
 import CreateRecipe from './screens/posts/CreateRecipe';
+import Categories from './screens/homepage/Categories';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
             <Route path="edit-profile" element={<EditProfile />} />
             <Route path="create-post" element={<CreatePost />} />
             <Route path="create-recipe" element={<CreateRecipe />} />
+            <Route path="category" element={<Categories />} />
+
           </Route>
           
 

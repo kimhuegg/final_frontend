@@ -20,6 +20,9 @@ function SearchBar({ setSearchQuery }) {
                 variant="outlined"
                 placeholder="Search..."
                 size="small"
+                style={{
+                    width : '80%'
+                }}
                 
             />
             <IconButton type="submit" aria-label="search" >
