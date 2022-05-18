@@ -46,8 +46,6 @@ function Profile() {
                 </Grid>
                 
             </Box>
-
-
         </Container>
     )
 }

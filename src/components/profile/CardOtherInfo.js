@@ -1,21 +1,12 @@
-import React from 'react'
-
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import {
-    Container,
-    Box,
-    Button,
-    Grid,
-    Avatar,
-    Divider,
-    IconButton
-} from '@mui/material'
 import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
 import HomeIcon from '@mui/icons-material/Home';
+import {
+    Box, IconButton
+} from '@mui/material';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 
 function CardOtherInfo() {
     const navigate = useNavigate()

@@ -12,27 +12,43 @@ import Profile from './screens/profile/Profile';
 import TabProfile from './components/profile/TabProfile';
 import Follower from './components/profile/Follower';
 import EditProfile from './screens/profile/EditProfile';
+import Recipe from './screens/posts/Recipe';
+import Post from './screens/posts/Post';
+import CreatePost from './screens/posts/CreatePost';
+import CreateRecipe from './screens/posts/CreateRecipe';
+import Categories from './screens/homepage/Categories';
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
+
         <Routes>
-          <Route path="/login" element={<LoginScreen />} />
-          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="login" element={<LoginScreen />} />
+          <Route path="register" element={<RegisterScreen />} />
 
           <Route path="/" element={<Navbar />} >
-            <Route path="/homepage" element={<Homepage />} />
-            <Route path="/profile" element={<Profile />} >
-              <Route path="post" element={<TabProfile />} index/>
+            <Route path="homepage" element={<Homepage />} />
+            <Route path="profile" element={<Profile />} >
+              <Route path="your-post" element={<TabProfile />} index />
               <Route path="follower" element={<Follower />} />
             </Route>
-            <Route path="/edit-profile" element={<EditProfile />} />
+            <Route path="edit-profile" element={<EditProfile />} />
+            <Route path="recipe" element={<Recipe />} />
+            <Route path="post" element={<Post />} />
+            <Route path="edit-profile" element={<EditProfile />} />
+            <Route path="create-post" element={<CreatePost />} />
+            <Route path="create-recipe" element={<CreateRecipe />} />
+            <Route path="category" element={<Categories />} />
+
           </Route>
+          
+
         </Routes>
-      </BrowserRouter>
-    </div>
+
+      </div>
+    </BrowserRouter>
   );
 }
 

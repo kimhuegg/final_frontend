@@ -4,7 +4,8 @@ import {
     Box,
     Button,
     Grid,
-    Typography
+    Typography,
+    Avatar
 } from '@mui/material'
 
 import { Link } from 'react-router-dom'
@@ -12,9 +13,9 @@ import Rating from '@mui/material/Rating';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import pic from './pic.jpg'
+import pic from '../profile/pic.jpg'
 
-function YourPostItem() {
+function ForYouItem() {
     const [value, setValue] = React.useState(2);
     return (
         <Box style={{
@@ -24,20 +25,23 @@ function YourPostItem() {
             boxShadow: 'rgb(232 234 235) 7px 7px 7px',
             marginBottom: 20
         }}>
-            <Grid container spacing={2}>
+            <Grid container spacing={4}>
                 <Grid item xs={4}>
                     <Box style={{
                         width: '100%',
                         height: '100%',
                         overflow: 'hidden',
-                        backgroundImage: `url(${pic})`,
-                        backgroundSize: 'cover'
+                        padding: 10
+                        // backgroundImage: `url(${pic})`,
+                        // backgroundSize: 'cover'
                     }}>
+                        <img src={pic} style={{width: '100%'}}/>
                     </Box>
 
                 </Grid>
                 <Grid item xs={8} style={{
                     textAlign: 'left',
+                    // paddingLeft: 10
                 }}>
                     <Box style={{
                         marginTop: 10,
@@ -72,12 +76,29 @@ function YourPostItem() {
                         </Typography>
 
                     </Box>
+
+                    <Box style={{
+                        display: 'flex',
+                        justifyContent: 'start',
+                        marginTop: 10
+                    }}>
+                        <Avatar />
+                        <Box style={{
+                            margin: 2
+                        }}>
+                             <Typography >Lê Thị Huế</Typography>
+                             <Typography style={{fontSize: 10,
+                            color: '#bdbdbd' }}>16 phút trước</Typography>
+                        </Box>
+                       
+                    </Box>
+
                     <Box style={{
                         color: 'rgb(116 112 112)',
                         display: 'flex',
                         justifyContent: 'start',
                         alignItems : 'center',
-                        marginTop : 15,
+                        marginTop : 10,
                         marginBottom : 10
                     }}>
                         <FavoriteBorderOutlinedIcon/><Typography > 1.5k &nbsp;</Typography>
@@ -90,4 +111,5 @@ function YourPostItem() {
     );
 }
 
-export default YourPostItem
+
+export default ForYouItem

@@ -8,13 +8,15 @@ import {
     Divider,
 } from '@mui/material'
 import { Alert, TextField, Button, FormControlLabel, Checkbox, } from '@mui/material';
-import Fab from "@material-ui/core/Fab";
+// import Fab from "@material-ui/core/Fab";
 import AddPhotoAlternateIcon from "@material-ui/icons/AddPhotoAlternate";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Input from '@mui/material/Input';
+
 
 import pic from './pic.jpg'
 import { useNavigate } from 'react-router-dom';
@@ -83,12 +85,12 @@ function EditMainPage() {
                     <label htmlFor="contained-button-file" style={{
                         position: 'absolute'
                     }}>
-                        <Fab component="span" >
-                            <AddPhotoAlternateIcon />
-                        </Fab>
+                        {/* <Fab component="span" > */}
+                        <AddPhotoAlternateIcon />
+                        {/* </Fab> */}
                     </label>
 
-                    <div id="preview" style={{
+                    <Box id="preview" style={{
                         width: '100%',
                         backgroundColor: '#bdbdbd',
                         height: 250,
@@ -100,7 +102,7 @@ function EditMainPage() {
                             width: '100%',
                             objectFit: 'cover'
                         }} />
-                    </div>
+                    </Box>
                 </Box>
                 <Box style={{
                     padding: 20,
@@ -121,9 +123,9 @@ function EditMainPage() {
                                 <label htmlFor="avatar-file" style={{
                                     position: 'absolute'
                                 }}>
-                                    <Fab component="span" >
-                                        <AddPhotoAlternateIcon />
-                                    </Fab>
+                                    {/* <Fab component="span" > */}
+                                    <AddPhotoAlternateIcon />
+                                    {/* </Fab> */}
                                 </label>
 
                                 <div id="preview-avatar" style={{
@@ -148,21 +150,21 @@ function EditMainPage() {
                             <Box sx={{
                                 border: '1px solid #bdbdbd',
                                 borderRadius: 3,
-                                padding: 3
+                                padding: 3,
+                                marginBottom: 3
                             }}>
-                                <TextareaAutosize
-                                    aria-label="empty textarea"
-                                    placeholder="Empty"
-                                    style={{ width: '100%', height: 100 }}
+                                <TextField
+                                    label="Mô tả"
+                                    multiline
+                                    rows={4}
+                                    // defaultValue=""
+                                    fullWidth
                                 />
                                 <Grid container spacing={2}>
                                     <Grid item xs={6}>
-
                                         <TextField fullWidth margin="dense" id="outlined-basic" label="Họ và tên" variant="standard" />
                                         <TextField fullWidth margin="dense" id="filled-basic" label="Username" variant="standard" />
                                         <TextField fullWidth margin="dense" id="standard-basic" label="Email" variant="standard" />
-
-
                                     </Grid>
                                     <Grid item xs={6}>
                                         <FormControl fullWidth>
