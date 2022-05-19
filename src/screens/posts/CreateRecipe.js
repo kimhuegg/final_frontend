@@ -10,6 +10,7 @@ import Hastag from '../../components/createRecipe/Hastag';
 import HeaderRecipe from '../../components/createRecipe/HeaderRecipe';
 import Step from '../../components/createRecipe/Step';
 import Material from '../../components/createRecipe/Material';
+import Category from '../../components/createRecipe/Category';
 
 function CreateRecipe() {
 
@@ -29,6 +30,7 @@ function CreateRecipe() {
                     padding: 20
                 }}>
                     <HeaderRecipe />
+                    <Category />
                     <Hastag />
                     <Grid container spacing={8} style={{paddingBottom: 20}}>
                         <Grid item xs={3}>
